@@ -1,5 +1,26 @@
+:root {
+	/* Colors */
+	--accent: #FF5733; /* Cam rực rỡ */
+	--background: #FEF9E7; /* Vàng nhạt ấm áp */
+	--lightAccent: #6EE7B7; /* Xanh ngọc tươi sáng */
+	--lighterAccent: #F3F4F6; /* Xám nhạt sáng */
+	--dark: #3B82F6; /* Xanh dương rực rỡ */
+	--darker: #155E75; /* Xanh lam đậm tươi */
+	--slate: #374151; /* Xám đậm trung tính cho chữ */
+	--white: #FFFFFF; /* Trắng tinh */
+	--black: #1F2A44; /* Đen xám đậm nhẹ */
+	--ink: var(--slate); /* Màu chữ chính */
+	--paper: var(--background); /* Màu nền chính */
+	--accentFont: 'Atkinson Hyperlegible', Georgia, Times, serif;
+	--primaryFont: 'Atkinson Hyperlegible', sans-serif;
+	--codeFont: 'Fira Code', monospace;
+}
+
 body {
 	line-height: 1.5;
+	font-family: var(--primaryFont);
+	background-color: var(--paper);
+	color: var(--ink);
 }
 
 @media (min-width: 48rem) {
@@ -19,7 +40,7 @@ body {
 	line-height: 1.1;
 	font-family: var(--accentFont);
 	font-weight: bold;
-	color: var(--darker);
+	color: var(--dark); /* Đổi sang xanh dương rực rỡ cho tiêu đề */
 	text-wrap: balance;
 }
 
@@ -40,12 +61,10 @@ h3 {
 
 h4 {
 	font-size: clamp(1.5rem, calc(1.5rem + 1vw), 1.8rem);
-	;
 }
 
 h5 {
 	font-size: clamp(1.35rem, calc(1.35rem + 1vw), 1.5rem);
-	;
 }
 
 h6 {
@@ -53,9 +72,16 @@ h6 {
 }
 
 a {
-	color: var(--darker);
-	text-decoration-thickness: 1px;
-	text-decoration-color: var(--dark);
+	color: var(--accent); /* Cam rực rỡ cho liên kết */
+	text-decoration: underline;
+	text-decoration-thickness: 2px; /* Tăng độ dày gạch chân */
+	text-decoration-color: var(--lightAccent); /* Xanh ngọc cho gạch chân */
+	transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+	color: var(--dark); /* Xanh dương rực rỡ khi hover */
+	text-decoration-color: var(--accent); /* Cam rực rỡ cho gạch chân khi hover */
 }
 
 ul {
@@ -68,5 +94,5 @@ ul ul {
 }
 
 ul::marker {
-	color: var(--accent);
+	color: var(--lightAccent); /* Xanh ngọc cho dấu đầu dòng */
 }

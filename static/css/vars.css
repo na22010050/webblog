@@ -1,22 +1,21 @@
 :root {
 	/* Colors */
-	--accent: #E63946;
-	--background: #FAF9F8;
-	--lightAccent: #A8DAE5;
-	--lighterAccent: #E6E8E4;
-	--dark: #457B9D;
-	--darker: #1D3557;
-	--slate: #2F3948;
+	--accent: #FF5733; /* Cam rực rỡ */
+	--background: #FEF9E7; /* Vàng nhạt ấm áp */
+	--lightAccent: #6EE7B7; /* Xanh ngọc tươi sáng */
+	--lighterAccent: #F3F4F6; /* Xám nhạt sáng */
+	--dark: #3B82F6; /* Xanh dương rực rỡ */
+	--darker: #155E75; /* Xanh lam đậm tươi */
+	--slate: #374151; /* Xám đậm trung tính cho chữ */
 
-	--white: #fff;
-	--black: #152030;
+	--white: #FFFFFF; /* Trắng tinh */
+	--black: #1F2A44; /* Đen xám đậm nhẹ */
 
-	--ink: var(--slate);
-	--paper: var(--background);
+	--ink: var(--slate); /* Màu chữ chính */
+	--paper: var(--background); /* Màu nền chính */
 
 	/**
-	 * These fonts are broken out into two separate variables from a previous iteration. I left
-	 * it in because it's nice to be able to split out the heading and body fonts.
+	 * Fonts không thay đổi
 	 */
 	--accentFont: 'Atkinson Hyperlegible', Georgia, Times, serif;
 	--primaryFont: 'Atkinson Hyperlegible', sans-serif;

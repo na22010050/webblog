@@ -1,12 +1,10 @@
 ---
-title: "Syntax highlighting with mdsvex"
-date: "2023-01-05"
-updated: "2023-01-05"
+title: "Các khái niệm chính của hệ thống phân tán."
+date: "2025-01-05"
+updated: "2025-01-05"
 categories:
-  - "sveltekit"
-  - "web"
-  - "css"
-  - "markdown"
+  - "Nguyễn Văn Ngọc Anh"
+
 coverImage: "/images/linus-nylund-Q5QspluNZmM-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
