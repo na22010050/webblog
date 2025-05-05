@@ -3,11 +3,11 @@ title: 'Syntax highlighting with mdsvex'
 date: '2023-01-05'
 updated: '2023-01-05'
 categories:
-  - 'sveltekit'
-  - 'web'
-  - 'css'
-  - 'markdown'
-coverImage: '/images/anh3.jpg'
+  - "sveltekit'
+  - "web"
+  - "css"
+  - "markdown"
+coverImage: "/images/anh3.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: This post shows you how syntax highlighting works here.

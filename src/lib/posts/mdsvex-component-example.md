@@ -1,12 +1,12 @@
 ---
-title: 'A Markdown post with a Svelte component'
-date: '2023-04-28'
-updated: '2023-04-28'
+title: "A Markdown post with a Svelte component"
+date: "2023-04-28"
+updated: "2023-04-28"
 categories:
-  - 'sveltekit'
-  - 'markdown'
-  - 'svelte'
-coverImage: '/images/ah.jpg'
+  - "sveltekit"
+  - "markdown"
+  - "svelte"
+coverImage: "/images/ah.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: This post demonstrates how to include a Svelte component in a Markdown post.
