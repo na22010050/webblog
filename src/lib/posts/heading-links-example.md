@@ -1,25 +1,35 @@
 ---
 title: "Ứng dụng phân tán"
-date: "2025-10-30"
-updated: "2025-4-29"
+date: "2025-4-29"
+updated: "2025-10-26"
 categories:
-  - "Nguyễn Văn Ngọc Anh"
-coverImage: "/static/images/word-image-209.jpeg"
+  - "sveltekit"
+  - "markdown"
+coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 coverWidth: 16
-coverHeight: 8
-excerpt: Ấn để xem thêm
+coverHeight: 9
+excerpt: Check out how heading links work with this starter in this post.
 ---
 
-# Đặc điểm chính của ứng dụng phân tán:
+Here are some headings:
 
-## Phân tán tài nguyên:
-Các thành phần (dữ liệu, xử lý, hoặc giao diện) được đặt trên nhiều máy tính, không tập trung ở một nơi duy nhất.
-### Giao tiếp qua mạng:
-Các nút trong hệ thống giao tiếp thông qua các giao thức mạng như HTTP, TCP/IP, hoặc các giao thức tùy chỉnh.
-#### Khả năng mở rộng:
-Ứng dụng phân tán thường dễ mở rộng bằng cách thêm nhiều nút để xử lý tải lớn hơn.
-##### Tính chịu lỗi:
-Hệ thống có thể tiếp tục hoạt động ngay cả khi một số nút gặp sự cố, nhờ cơ chế dự phòng hoặc phân phối tải.
-###### Đồng thời:
-Nhiều tác vụ có thể được thực hiện đồng thời trên các nút khác nhau.
+## Here's an h2
+
+Lorem ipsum dolor sit amet
+
+### This is an h3
+
+Lorem ipsum dolor sit amet
+
+#### As you've probably guessed, this is an h4
+
+Lorem ipsum dolor sit amet
+
+##### This, of course, is an h5
+
+Lorem ipsum dolor sit amet
+
+###### We're deep in h6 territory now
+
+Lorem ipsum dolor sit amet
 
