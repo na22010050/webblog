@@ -1,9 +1,9 @@
 ---
-title: 'Syntax highlighting with mdsvex'
-date: '2023-01-05'
-updated: '2023-01-05'
+title: "Syntax highlighting with mdsvex"
+date: "2023-01-05"
+updated: "2023-01-05"
 categories:
-  - "sveltekit'
+  - "sveltekit"
   - "web"
   - "css"
   - "markdown"
@@ -31,7 +31,7 @@ And that will render just like so:
 }
 ```
 
-Here's how you'd do JavaScript:
+Here"s how you"d do JavaScript:
 
 ````
 \```js
@@ -53,7 +53,7 @@ Of course, mdsvex supports Svelte highlighting, too:
 
 ```svelte
 <script>
-	import myComponent from '$lib/components/myComponent.svelte';
+	import myComponent from "$lib/components/myComponent.svelte";
 
 	export let myProp = undefined;
 </script>
@@ -63,4 +63,4 @@ Of course, mdsvex supports Svelte highlighting, too:
 </div>
 ```
 
-All these colors are in `src/lib/assets/css/prism.css`, if you'd like to change them.
+All these colors are in `src/lib/assets/css/prism.css`, if you"d like to change them.
