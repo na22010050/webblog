@@ -4,7 +4,6 @@ date: "2025-10-26"
 updated: "2025-4-30"
 categories:
   - "Nguyễn Văn Ngọc Anh"
- 
 coverImage: "/static/images/anh1.jpg"
 coverWidth: 16
 coverHeight: 9
