@@ -7,7 +7,7 @@ categories:
   - "web"
   - "css"
   - "markdown"
-coverImage: "/images/anh3.jpg"
+coverImage: "/images/0106_hinh-nen-4k-may-tinh29.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: This post shows you how syntax highlighting works here.
