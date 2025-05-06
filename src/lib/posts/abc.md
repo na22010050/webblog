@@ -1,13 +1,10 @@
 ---
-title: "Syntax highlighting with mdsvex"
-date: "2023-01-05"
-updated: "2023-01-05"
+title: "Tiến trình và luồng"
+date: "2024-01-02"
+updated: "2024-10-30"
 categories:
-  - "sveltekit"
-  - "web"
-  - "css"
-  - "markdown"
-coverImage: "/images/0106_hinh-nen-4k-may-tinh29.jpg"
+  - "Nguyễn Văn Ngọc Anh"
+coverImage: "/images/tải xuống.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: This post shows you how syntax highlighting works here.

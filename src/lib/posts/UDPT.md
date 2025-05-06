@@ -1,7 +1,7 @@
 ---
 title: "Tổng quan về ứng dụng phân tán"
-date: "2025-10-26"
-updated: "2025-4-30"
+date: "2025-01-01"
+updated: "2025-04-29"
 categories:
   - "Nguyễn Văn Ngọc Anh"
 coverImage: "/images/anh1.jpg"
