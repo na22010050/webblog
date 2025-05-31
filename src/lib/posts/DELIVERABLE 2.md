@@ -1,19 +1,82 @@
 ---
-title: "DELIVERABLE 2"
+title: "DELIVERABLE 2 - DEMO"
 date: "2025-05-12"
 updated: "2025-20-05"
 categories:
   - "Nguyễn Văn Ngọc Anh"
   - "Trịnh Phúc Lương"
-coverImage: "/images/hp-15s-fq-gen-12_1.png"
+coverImage: "/images/crock.webp"
 coverWidth: 16
 coverHeight: 9
-excerpt: This post shows you how syntax highlighting works here.
+excerpt: Bài viết trình bày cài đặt thư viện cockroachDB và Demo.
 ---
 
 ## 1. Bản vẽ kiến trúc hệ thống
 ![Sơ đồ use case](../../../static/images/usecase.png)
-*Miêu tả một chút về use case…*
+# 📌 Mô tả Use Case – Hệ thống Quản lý Khám bệnh
+
+## 1. Các Tác Nhân (Actor)
+
+| Actor     | Vai trò             | Mô tả |
+|-----------|---------------------|-------|
+| **Admin** | Quản trị hệ thống   | Có quyền cao nhất, quản lý toàn bộ thông tin: bác sĩ, hồ sơ bệnh nhân, lịch khám, hóa đơn, thống kê, dịch vụ, phân công. |
+| **Doctor**| Bác sĩ              | Thực hiện các tác vụ liên quan đến khám chữa bệnh: xem lịch, lập hóa đơn, tạo hồ sơ bệnh nhân. |
+| **Patient**| Bệnh nhân          | Sử dụng hệ thống để đặt lịch khám, xem thông tin bác sĩ, dịch vụ, gửi yêu cầu hỗ trợ, tương tác với chatbot. |
+
+---
+
+## 2. Các chức năng chính theo từng Actor
+
+### 👨‍💼 Admin
+
+- Quản lý Bác sĩ
+- Quản lý Hồ sơ bệnh nhân
+- Quản lý Lịch khám
+- Quản lý Hỗ trợ bệnh nhân
+- Quản lý Dịch vụ
+- Quản lý Lịch làm việc bác sĩ
+- Quản lý Hóa đơn và Thống kê
+- Đăng nhập / Đăng xuất
+
+### 🥼 Doctor (Bác sĩ)
+
+- Đăng nhập / Đăng xuất
+- Xem Lịch khám
+- Tạo Hồ sơ bệnh nhân
+- Lập Hóa đơn
+  - (mở rộng) In Hóa đơn
+
+### 🧑‍⚕️ Patient (Bệnh nhân)
+
+- Đăng nhập / Đăng xuất
+- Đặt Lịch khám
+- Xem Danh sách Dịch vụ
+- Tìm Bác sĩ
+- Gửi Yêu cầu Hỗ trợ
+- Chat với Bot AI
+
+---
+
+## 3. Mối Quan Hệ Tương Tác
+
+| Tương tác               | Mô tả |
+|-------------------------|-------|
+| **Admin ↔ Doctor**      | Phân công lịch, quản lý hồ sơ bác sĩ |
+| **Admin ↔ Patient**     | Quản lý lịch hẹn, hỗ trợ, hóa đơn |
+| **Doctor ↔ Patient**    | Khám bệnh, lập hồ sơ, xuất hóa đơn |
+| **Patient ↔ ChatBot AI**| Hỗ trợ tra cứu, tư vấn nhanh |
+| **Admin ↔ Dịch vụ/Hóa đơn** | Thống kê, kiểm tra, chỉnh sửa dữ liệu |
+
+---
+
+## 4. Luồng Hoạt Động Minh Họa
+
+1. **Patient** đăng nhập → Đặt lịch khám.
+2. **Admin** phân công bác sĩ phù hợp.
+3. **Doctor** xem lịch → Khám → Tạo hồ sơ và lập hóa đơn.
+4. **Patient** xác nhận và in hóa đơn nếu cần.
+5. **Admin** xem thống kê và hỗ trợ bệnh nhân nếu có.
+
 
 ## 2. Mô tả chi tiết các thành phần
 
@@ -80,12 +143,10 @@ excerpt: This post shows you how syntax highlighting works here.
 - Khuyến nghị bật chế độ bảo mật (secure mode) trong CockroachDB khi triển khai thực tế.
 - Có thể bổ sung JWT để bảo vệ API nếu triển khai ứng dụng mobile hoặc microservice.
 
-## Kết luận
+## 🎯 Kết luận
 
 Hệ thống quản lý phòng khám da liễu được xây dựng dựa trên Laravel và CockroachDB đáp ứng các yêu cầu quan trọng của một hệ thống phân tán:
 - Đảm bảo khả năng mở rộng dữ liệu theo chiều ngang.
 - Hỗ trợ tính sẵn sàng và tự phục hồi thông qua replication.
 - Thiết kế kiến trúc rõ ràng, phù hợp với việc triển khai thực tế không phụ thuộc Docker.
 - Phù hợp với chủ đề học phần “Phân tán dữ liệu”, ứng dụng công nghệ hiện đại và có tính ứng dụng cao.
-
-

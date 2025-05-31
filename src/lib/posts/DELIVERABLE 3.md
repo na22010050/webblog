@@ -1,11 +1,11 @@
 ---
-title: "📋DELIVERABLE 3 – WEBSITE"
+title: "DELIVERABLE 3 – WEBSITE"
 date: "2025-05-27"
 updated: "2025-30-05"
 categories:
   - "Nguyễn Văn Ngọc Anh"
   - "Trịnh Phúc Lương"
-coverImage: "/images/hp-15s-fq-gen-12_1.png"
+coverImage: "/images/home.webp"
 coverWidth: 16
 coverHeight: 9
 excerpt: Bài viết trình bày tiến độ phát triển hệ thống quản lý phòng khám da liễu.
@@ -49,8 +49,7 @@ Hệ thống đã được kiểm thử thành công với các tính năng chí
 
 Các ảnh chụp màn hình về giao diện hệ thống và các truy vấn trên CockroachDB được đính kèm dưới đây:
 
-![Giao diện tạo lịch hẹn](images/screenshot_appointment.jpeg)  
-![Truy vấn CockroachDB](images/screenshot_cockroachdb_query.jpeg)
+![Giao diện tạo lịch khám](/images/giaodienhen.png)
 
 *Ghi chú*: Các ảnh chụp màn hình và video demo (nếu có) sẽ được đăng tải trên website/blog hoặc kênh YouTube.
 
@@ -65,55 +64,107 @@ public function store(Request $request)
         'patient_id' => 'required|exists:patients,id',
         'doctor_id' => 'required|exists:doctors,id',
         'datetime' => 'required|date',
-    ]);
+    ]);Appointment::create($validated);
 
-    Appointment::create($validated);
     return response()->json(['message' => 'Appointment created successfully']);
 }
+```
 
+Tạo hồ sơ y tế – `MedicalRecordController.php`
 
+```php
+public function store(Request $request)
+{
+    $request->validate([
+        'appointment_id' => 'required|exists:appointments,id',
+        'diagnosis' => 'required|string|max:255',
+        'note' => 'nullable|string',
+    ]);
 
+    MedicalRecord::create([
+        'appointment_id' => $request->appointment_id,
+        'diagnosis' => $request->diagnosis,
+        'note' => $request->note,
+    ]);
 
+    return redirect()->route('doctor.medical-records.index')
+        ->with('success', 'Medical record created successfully.');
+}
+```
 
+Tạo hóa đơn – `InvoiceController.php`
 
+```php
+public function store(Request $request)
+{
+    $request->validate([
+        'appointment_id' => 'required|exists:appointments,id',
+        'total_amount' => 'required|numeric|min:0',
+        'services' => 'required|string',
+    ]);
 
+    Invoice::create([
+        'appointment_id' => $request->appointment_id,
+        'total_amount' => $request->total_amount,
+        'services' => $request->services,
+    ]);
 
+    return redirect()->route('invoices.index')
+        ->with('success', 'Invoice created successfully.');
+}
+```
 
+Tạo dịch vụ – `ServiceController.php`
 
+```php
+public function store(Request $request)
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'price' => 'required|numeric|min:0',
+    ]);
 
+    Service::create([
+        'name' => $request->name,
+        'price' => $request->price,
+    ]);
 
+    return redirect()->back()->with('success', 'Service created.');
+}
 
 ```
 ## 4. Danh sách tính năng đã hoàn thành
 
+## 4. Danh sách tính năng đã hoàn thành
+
 Hệ thống quản lý phòng khám da liễu đã hoàn thành các tính năng cốt lõi sau, đáp ứng đầy đủ nhu cầu quản lý và vận hành:
 
-- **Quản lý cuộc hẹn**:  
-  - Tạo, xem, sửa, và xóa lịch hẹn giữa bệnh nhân và bác sĩ một cách dễ dàng.  
+- **Quản lý cuộc hẹn**:
+
+  - Tạo, xem, sửa, và xóa lịch hẹn giữa bệnh nhân và bác sĩ một cách dễ dàng.
   - Đảm bảo lịch hẹn không bị trùng lặp nhờ kiểm tra trong Laravel.
 
-- **Quản lý tài khoản**:  
-  - Tạo, xem, sửa, và xóa tài khoản cho Admin và Bác sĩ.  
-  - Giao diện quản lý tài khoản thân thiện, hỗ trợ phân quyền chi tiết.
+- **Quản lý tài khoản**:
 
-- **Hồ sơ y tế**:  
-  - Lưu trữ và quản lý thông tin khám chữa bệnh của từng bệnh nhân.  
+  - Tạo, xem, sửa, và xóa tài khoản cho Admin và Bác sĩ.
+  - Giao diện quản lý tài khoản thân thiện, hỗ trợ phân quyền chi tiết.
+  ![Giao diện quản lý tài khoản](/images/qltk.png)  
+*Hình: Giao diện quản lý tài khoản Admin và Bác sĩ*
+
+- **Hồ sơ y tế**:
+
+  - Lưu trữ và quản lý thông tin khám chữa bệnh của từng bệnh nhân.
   - Hỗ trợ bác sĩ ghi chú và cập nhật chẩn đoán.
 
-- **Hóa đơn**:  
-  - Tạo, xuất, và quản lý hóa đơn thanh toán.  
+- **Hóa đơn**:
+
+  - Tạo, xuất, và quản lý hóa đơn thanh toán.
   - Hỗ trợ xuất hóa đơn dưới dạng PDF (đang phát triển thêm).
 
-- **Phân quyền người dùng**:  
-  - Tùy chỉnh quyền truy cập cho từng vai trò (Admin, Bác sĩ, Bệnh nhân, Nhân viên).  
+- **Phân quyền người dùng**:
+
+  - Tùy chỉnh quyền truy cập cho từng vai trò (Admin, Bác sĩ, Bệnh nhân, Nhân viên).
   - Đảm bảo an toàn và bảo mật thông tin người dùng.
-
-- **Hệ thống phân tán**:  
-  - Tự động sao chép và phân mảnh dữ liệu thông qua **CockroachDB**.  
-  - Đảm bảo tính sẵn sàng cao và khả năng phục hồi khi có sự cố.
-
-![Giao diện quản lý tài khoản](images/screenshot_admin_management.jpeg)  
-*Hình: Giao diện quản lý tài khoản Admin và Bác sĩ*
 
 ## 5. Kế hoạch tiếp theo
 
@@ -145,5 +196,3 @@ Hệ thống quản lý phòng khám da liễu đã hoàn thành các tính năn
   - Thêm báo cáo lỗi và hệ thống giám sát (ví dụ: ELK Stack hoặc Sentry).  
   - Theo dõi hoạt động hệ thống để phát hiện và khắc phục sự cố nhanh chóng.
 
-![Kế hoạch phát triển](images/screenshot_roadmap.jpeg)  
-*Hình: Minh họa kế hoạch phát triển tiếp theo*
