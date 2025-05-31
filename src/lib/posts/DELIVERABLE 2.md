@@ -12,7 +12,7 @@ excerpt: Bài viết trình bày cài đặt thư viện cockroachDB và Demo.
 ---
 
 ## 1. Bản vẽ kiến trúc hệ thống
-![Sơ đồ use case](../../../static/images/usecase.png)
+![Sơ đồ use case](/images/usecase.png)
 # 📌 Mô tả Use Case – Hệ thống Quản lý Khám bệnh
 
 ## 1. Các Tác Nhân (Actor)
