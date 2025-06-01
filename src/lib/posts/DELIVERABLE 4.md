@@ -1,5 +1,5 @@
 ---
-title: "DELIVERABLE 4"
+title: "DELIVERABLE 4 – WEBSITE"
 date: "2025-06-02"
 updated: "2025-06-01"
 categories:
@@ -13,13 +13,13 @@ excerpt:  Báo cáo đánh giá hệ thống quản lý phòng khám da liễu s
 
 ---
 
-# 🩺Đánh giá hệ thống quản lý phòng khám da liễu
+# Đánh giá hệ thống quản lý phòng khám da liễu
 
 Hệ thống quản lý phòng khám da liễu được xây dựng trên nền tảng Laravel và CockroachDB, triển khai theo kiến trúc phân tán. Dưới đây là báo cáo tổng hợp đánh giá hệ thống theo các tiêu chí của Deliverable 4 trong môn học "Ứng dụng Phân tán".
 
 ---
 
-## 1. ⚙️Đánh giá theo tiêu chí bắt buộc
+## 1. Đánh giá theo tiêu chí bắt buộc
 
 ### 1.1. Fault Tolerance (Khả năng chịu lỗi)
 
@@ -52,7 +52,7 @@ Hệ thống sử dụng Laravel để ghi log các hành vi ứng dụng vào `
 
 ---
 
-## 🚀2. Đánh giá theo tiêu chí tùy chọn
+## 2. Đánh giá theo tiêu chí tùy chọn
 
 ### 2.1. System Recovery (Khả năng tự khôi phục)
 
@@ -86,7 +86,7 @@ Hệ thống hiện đang chạy CockroachDB ở chế độ `--insecure`. Chưa
 
 ---
 
-## 3. 🧾Tổng kết
+## 3. Tổng kết
 
 Hệ thống quản lý phòng khám da liễu đã được xây dựng thành công trên nền tảng Laravel và CockroachDB, với nhiều tiêu chí phân tán được đáp ứng. Hệ thống thể hiện rõ đặc điểm của một hệ thống phân tán thông qua khả năng chịu lỗi, cơ chế sao chép dữ liệu, giao tiếp mạng, và phục hồi sau lỗi.
 

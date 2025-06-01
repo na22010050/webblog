@@ -39,7 +39,7 @@ Dự án quản lý phòng khám da liễu đã đạt được nhiều cột m�
 - **Vấn đề**: Ký tự không hợp lệ trong file `.env` gây lỗi khi kết nối.  
   **Giải pháp**: Xóa và viết lại tay nội dung file để đảm bảo encoding chuẩn UTF-8.
 
-## 2. 📸Demo hoạt động của hệ thống
+## 2. Demo hoạt động của hệ thống
 
 Hệ thống đã được kiểm thử thành công với các tính năng chính như:
 - Tạo lịch hẹn

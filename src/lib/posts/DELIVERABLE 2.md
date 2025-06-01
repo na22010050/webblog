@@ -13,7 +13,7 @@ excerpt: Bài viết trình bày cài đặt thư viện cockroachDB và Demo.
 
 ## 1. Bản vẽ kiến trúc hệ thống
 ![Sơ đồ use case](/images/usecase.png)
-# 📌 Mô tả Use Case – Hệ thống Quản lý Khám bệnh
+#  Mô tả Use Case – Hệ thống Quản lý Khám bệnh
 
 ## 1. Các Tác Nhân (Actor)
 
@@ -27,7 +27,7 @@ excerpt: Bài viết trình bày cài đặt thư viện cockroachDB và Demo.
 
 ## 2. Các chức năng chính theo từng Actor
 
-### 👨‍💼 Admin
+###  Admin
 
 - Quản lý Bác sĩ
 - Quản lý Hồ sơ bệnh nhân
@@ -38,7 +38,7 @@ excerpt: Bài viết trình bày cài đặt thư viện cockroachDB và Demo.
 - Quản lý Hóa đơn và Thống kê
 - Đăng nhập / Đăng xuất
 
-### 🥼 Doctor (Bác sĩ)
+###  Doctor (Bác sĩ)
 
 - Đăng nhập / Đăng xuất
 - Xem Lịch khám
@@ -46,7 +46,7 @@ excerpt: Bài viết trình bày cài đặt thư viện cockroachDB và Demo.
 - Lập Hóa đơn
   - (mở rộng) In Hóa đơn
 
-### 🧑‍⚕️ Patient (Bệnh nhân)
+###  Patient (Bệnh nhân)
 
 - Đăng nhập / Đăng xuất
 - Đặt Lịch khám
@@ -143,7 +143,7 @@ excerpt: Bài viết trình bày cài đặt thư viện cockroachDB và Demo.
 - Khuyến nghị bật chế độ bảo mật (secure mode) trong CockroachDB khi triển khai thực tế.
 - Có thể bổ sung JWT để bảo vệ API nếu triển khai ứng dụng mobile hoặc microservice.
 
-## 🎯 Kết luận
+##  Kết luận
 
 Hệ thống quản lý phòng khám da liễu được xây dựng dựa trên Laravel và CockroachDB đáp ứng các yêu cầu quan trọng của một hệ thống phân tán:
 - Đảm bảo khả năng mở rộng dữ liệu theo chiều ngang.
