@@ -143,24 +143,24 @@ Hệ thống quản lý phòng khám da liễu đã hoàn thành các tính năn
 
   - Tạo, xem, sửa, và xóa lịch hẹn giữa bệnh nhân và bác sĩ một cách dễ dàng.
   - Đảm bảo lịch hẹn không bị trùng lặp nhờ kiểm tra trong Laravel.
+  ![Giao diện quản lý lịch hẹn](/images/qlylichhen.png) 
 
 - **Quản lý tài khoản**:
 
   - Tạo, xem, sửa, và xóa tài khoản cho Admin và Bác sĩ.
   - Giao diện quản lý tài khoản thân thiện, hỗ trợ phân quyền chi tiết.
   ![Giao diện quản lý tài khoản](/images/qltk.png)  
-*Hình: Giao diện quản lý tài khoản Admin và Bác sĩ*
 
 - **Hồ sơ y tế**:
 
   - Lưu trữ và quản lý thông tin khám chữa bệnh của từng bệnh nhân.
   - Hỗ trợ bác sĩ ghi chú và cập nhật chẩn đoán.
-
+![Giao diện hồ sơ y tế](/images/hosoyte.png)
 - **Hóa đơn**:
 
   - Tạo, xuất, và quản lý hóa đơn thanh toán.
   - Hỗ trợ xuất hóa đơn dưới dạng PDF (đang phát triển thêm).
-
+![Giao diện hóa đơn](/images/hoadon.png)
 - **Phân quyền người dùng**:
 
   - Tùy chỉnh quyền truy cập cho từng vai trò (Admin, Bác sĩ, Bệnh nhân, Nhân viên).
